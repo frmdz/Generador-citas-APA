@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Generador APAr</title>
     <style>
       html {
@@ -8,14 +9,14 @@
         color: #454545;
         background: #fbfbfb;
         font-family: Sans-serif;
-
       }
       .TxtStyle {
         margin-bottom: .5em;
         border-color: gray;
         padding: .7em .5em;
         border-radius: .25em;
-        width: 25em;
+        width: 80%;
+        max-width: 27em;
       }
       .Bstyle {
         background-color: #089CBF;
@@ -41,13 +42,11 @@
     let año = document.getElementById("año").value;
     document.getElementById("cita-libro").innerHTML = formatolibro(apellido, nombre, año, titulo, pais, ciudad, editorial);
   }
-
   function generarweb () {
     let titulo = document.getElementById("tituloweb").value;
     let url = document.getElementById("url").value;
     document.getElementById("cita-web").innerHTML = formatoweb(titulo, url);
   }
-
   function formatoweb(titulo, url) {
     if (titulo.length != 0 && url.length != 0) {
       titulo= titulo[0].toUpperCase()+ titulo.substring(1);
@@ -56,7 +55,6 @@
       return "Debes llenar el URL y El Título";
     }
   }
-
   function formatolibro( apellido, nombre, año, titulo, pais, ciudad, editorial) {
     if (apellido.length != 0) {
       apellido= apellido[0].toUpperCase()+ apellido.substring(1)+", ";
@@ -100,14 +98,15 @@
 	  <input class="TxtStyle" type="text" id="ciudad" placeholder="Ciudad"/><br>
 	  <input class="TxtStyle" type="text" id="año" placeholder="Año de Publicación"/><br>
 	  <input class="Bstyle" type="submit" onclick="generarlibro();" /><br>
+  </form>
 
+  <form id="form2" onsubmit="return false;">
     <h2>Sitios Web</h2>
     <p id="cita-web"></p>
       <input class="TxtStyle" type="text" id="tituloweb" placeholder="Titulo"/><br>
       <input class="TxtStyle" type="text" id="url" placeholder="URL" /><br>
       <input class="Bstyle" type="submit" onclick="generarweb();" />
-
-</form>
+  </form>
 
   </body>
 </html>
