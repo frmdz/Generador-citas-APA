@@ -25,26 +25,25 @@ function generarlibro() {
       apellido = apellido.charAt().toUpperCase() + apellido.slice(1) + ", ";
     }
     if (nombre.length) {
-      nombre = nombre.charAr().toUpperCase() + ". ";
+      nombre = nombre.charAt().toUpperCase() + ". ";
     }
     if (año.length) {
       año = "(" + año + "). ";
     }
     if (titulo.length) {
-      titulo = titulo.charAr().toUpperCase() + titulo.slice(1) + ". ";
+      titulo = titulo.charAt().toUpperCase() + titulo.slice(1) + ". ";
     }
     if (pais.length) {
-      pais = pais.charAr().toUpperCase() + pais.slice(1);
+      pais = pais.charAt().toUpperCase() + pais.slice(1);
       if (ciudad.length != 0) {
         pais = pais + ", ";
-        ciudad = ciudad.charAr().toUpperCase() + ciudad.slice(1) + ": ";
+        ciudad = ciudad.charAt().toUpperCase() + ciudad.slice(1) + ": ";
       } else {
         pais = pais + ": ";
       }
     }
     if (editorial.length) {
-      editorial = editorial.charAr().toUpperCase() + editorial.slice(1) + ".";
+      editorial = editorial.charAt().toUpperCase() + editorial.slice(1) + ".";
     }
-
-    document.getElementById("cita-libro").innerHTML = apellido+nombre+año+titulo+pais+ciudad+editorial;
+    document.getElementById("cita-libro").innerHTML = apellido+nombre+año+titulo+pais+ciudad+editorial+"jkhg";
   }
