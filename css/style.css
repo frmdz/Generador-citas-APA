@@ -50,7 +50,7 @@ body {
             color: black;
             font-style: italic;
         }
-        .TxtStyle {
+        .estilo-texto {
             outline: none;
             display: block;
             width: 100%;
@@ -61,7 +61,7 @@ body {
             height: 2em;
         }
 
-    .Bstyle {
+    .estilo-boton {
         background-color: #e74c3c;
         border: none;
         padding: 1em 2em; 
@@ -69,6 +69,6 @@ body {
         color: #fff;
         border-radius: .50em;
     }
-        .Bstyle:hover {
+        .estilo-boton:hover {
             background-color:#c0392b;
         }

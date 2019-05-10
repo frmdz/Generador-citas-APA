@@ -1,9 +1,8 @@
-
-
 function generarweb () {
   let titulo = document.getElementById("tituloweb").value;
   let url = document.getElementById("url").value;
 
+  //check if the strings are not empty and formatting
   if (titulo.length && url.length) {
     document.getElementById("cita-web").innerHTML = `${titulo.charAt(0).toUpperCase() + titulo.slice(1)}. Recuperado de ${url}.`;
   } else{
@@ -11,6 +10,7 @@ function generarweb () {
   }    
 
 }
+
 
 function generarlibro() {
   let nombre = document.getElementById("nombre").value, 
@@ -20,7 +20,8 @@ function generarlibro() {
       pais = document.getElementById("pais").value,
       ciudad = document.getElementById("ciudad").value,
       año = document.getElementById("año").value;
-
+    
+    //check if the strings are not empty and formatting
     if (apellido.length) {
       apellido = apellido.charAt().toUpperCase() + apellido.slice(1) + ", ";
     }
@@ -45,5 +46,6 @@ function generarlibro() {
     if (editorial.length) {
       editorial = editorial.charAt().toUpperCase() + editorial.slice(1) + ".";
     }
-    document.getElementById("cita-libro").innerHTML = apellido+nombre+año+titulo+pais+ciudad+editorial+"jkhg";
+
+    document.getElementById("cita-libro").innerHTML = apellido + nombre + año + titulo + pais + ciudad + editorial;
   }
