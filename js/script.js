@@ -1,8 +1,9 @@
 function generarweb () {
+  //save the inputs.
   let titulo = document.getElementById("tituloweb").value;
   let url = document.getElementById("url").value;
 
-  //check if the strings are not empty and formatting
+  //check if the strings are not empty and generates the citation.
   if (titulo.length && url.length) {
     document.getElementById("cita-web").innerHTML = `${titulo.charAt(0).toUpperCase() + titulo.slice(1)}. Recuperado de ${url}.`;
   } else{
@@ -13,6 +14,7 @@ function generarweb () {
 
 
 function generarlibro() {
+  //save the inputs.
   let nombre = document.getElementById("nombre").value, 
       apellido = document.getElementById("apellido").value,
       editorial = document.getElementById("editorial").value,
@@ -21,7 +23,8 @@ function generarlibro() {
       ciudad = document.getElementById("ciudad").value,
       año = document.getElementById("año").value;
     
-    //check if the strings are not empty and formatting
+    //check if the strings are not empty and generates the citation.
+    //TODO: i think there's a better way to implement this, there's a lot of if statements.
     if (apellido.length) {
       apellido = apellido.charAt().toUpperCase() + apellido.slice(1) + ", ";
     }
